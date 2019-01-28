@@ -52,7 +52,15 @@ div.y {
 
 @media (prefers-dark-interface)
 {
-    body {
-        color: white;
+    html {
+        -apple-color-filter: apple-invert-lightness();
+    }
+    a {
+        -apple-color-filter: none;
+        color: -webkit-link;
+    }
+    img {
+        filter: invert(100%);
     }
 }
+
