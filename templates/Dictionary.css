@@ -50,9 +50,18 @@ div.y {
     color: #333;
 }
 
+/* from https://eclecticlight.co/2018/10/04/make-mojave-custom-dictionaries-work-better/ */
 @media (prefers-dark-interface)
 {
-    body {
-        color: white;
+    html {
+        -apple-color-filter: apple-invert-lightness();
+    }
+    a {
+        -apple-color-filter: none;
+        color: -webkit-link;
+    }
+    img {
+        filter: invert(100%);
     }
 }
+
